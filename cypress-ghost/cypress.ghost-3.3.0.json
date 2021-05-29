@@ -1,0 +1,16 @@
+{
+    "testFiles": "3.3.0/**/*.spec.*",
+    "chromeWebSecurity":  false,
+    "redirectionLimit": 100,
+    "defaultCommandTimeout": 10000,
+    "video": false,
+    "trashAssetsBeforeRuns": true,
+    "screenshotOnRunFailure": false,
+    "capture": "fullPage",
+    "scale": true,
+    "env": {
+        "GHOST_HOST": "http://ghost:3001",
+        "GHOST_USER": "user@test.com",
+        "GHOST_PASS": "dev1234567"
+    }
+}

@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  vtr-test:
+    container_name: vtr-test
+    image: vrt-test
+    build:
+      context: .
+      dockerfile: ./Dockerfile-vrt
+    volumes: 
+      - ./vrt-results/report:/report:rw
+      - ./cypress-ghost/cypress/screenshots:/screenshots:rw

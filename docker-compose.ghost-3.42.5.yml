@@ -1,0 +1,40 @@
+version: '3.4'
+
+networks:
+  ghost_dev:
+    name: ghost_dev
+services:
+  ghost:
+    container_name: ghost
+    image: ghost-test:3.42.5
+    build:
+      context: .
+      dockerfile: ./Dockerfile-ghost-3.42.5
+    environment:
+      spam__user_login__freeRetries: 1000
+      spam__private_block__freeRetries: 1000
+      spam__global_block__freeRetries: 1000
+      server__port: 3001
+      url: http://localhost:3001
+      NODE_ENV: development
+    healthcheck:
+      test: ['CMD', 'ping', '-c', '1', '-p', '3001', 'localhost']
+      retries: 3
+      start_period: 10s
+    ports:
+      - 3001:3001
+    networks:
+      - ghost_dev
+
+  cypress:
+    container_name: cypress-chrome
+    image: cypress/included:7.3.0
+    working_dir: /e2e
+    entrypoint: ["/bin/sh", "-c", "npm install && npm run test:3.42.5"]
+    volumes:
+      - ./cypress-ghost:/e2e:rw
+    depends_on: 
+      ghost:
+        condition: service_healthy
+    networks:
+      - ghost_dev

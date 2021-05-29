@@ -1,0 +1,27 @@
+{
+  "name": "miso4103-entregasemana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "npx cypress open --config-file ./cypress.dev.json",
+    "lint": "npx eslint",
+    "test:3.3.0": "npx cypress run --config-file ./cypress.ghost-3.3.0.json",
+    "test:3.42.5": "npx cypress run --config-file ./cypress.ghost-3.42.5.json",
+    "test": "npx cypress run --config-file ./cypress.dev.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-cgarciasantander:jmonterovalverdeMISO/MISO4103-EntregaSemana.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "faker": "^5.5.3",
+    "eslint": "^7.25.0",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}

@@ -1,0 +1,12 @@
+# https://hub.docker.com/_/microsoft-dotnet
+FROM mcr.microsoft.com/dotnet/nightly/sdk:5.0 AS build
+#WORKDIR /vrt-code
+
+LABEL Name=vrt-report Version=0.0.3
+
+FROM mcr.microsoft.com/dotnet/runtime:5.0
+COPY ./vrt-app .
+
+RUN apt-get update && apt-get install -y apt-utils libgdiplus libc6-dev
+
+ENTRYPOINT ["dotnet", "vrt-4103.dll"]

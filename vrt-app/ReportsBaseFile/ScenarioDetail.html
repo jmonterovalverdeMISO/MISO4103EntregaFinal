@@ -1,0 +1,35 @@
+﻿<div class="card">
+    <div class="card-header" id="heading{0}">
+        <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{0}" aria-expanded="true" aria-controls="collapseOne">
+                Scenario: {6} - {1}
+            </button>
+        </h2>
+    </div>
+
+    <div id="collapse{0}" class="collapse" aria-labelledby="heading{0}" data-parent="#accordionScenarios">
+        <div class="card-body">
+            <p>
+                Scenario: {6}
+            </p>
+            <p>
+                Step: {1}
+            </p>
+            <p>Result: {2}</p>
+            <div class="imgline">
+                <div class="imgcontainer">
+                    <span class="imgname">Reference</span>
+                    <img class="img2" src="{3}" id="refImage" label="Reference">
+                </div>
+                <div class="imgcontainer">
+                    <span class="imgname">Test</span>
+                    <img class="img2" src="{4}" id="testImage" label="Test">
+                </div>
+                <div class="imgcontainer">
+                    <span class="imgname">Diff</span>
+                    <img class="img2" src="{5}" id="diffImage" label="Diff">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
