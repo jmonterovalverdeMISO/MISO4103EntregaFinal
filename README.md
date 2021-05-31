@@ -16,7 +16,7 @@ En [este documento](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSema
 | [F02](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/F02) | Crear Post | 
 | [F04](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/F04) | Crear Page | 
 
-Todas las funcionalidades tinen escenarios para ser probadas en ambas versiones de Ghost.
+Todas las funcionalidades tinen escenarios para ser probadas en ambas versiones de Ghost. Adicionalmente una vez que las pruebas han ejecutado se puede hacer VRT sobre los resultados de las mismas
 
 # Correr pruebas (Headless) :rocket:
 ## Pasos para despliegue
