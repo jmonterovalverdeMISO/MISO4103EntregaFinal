@@ -9,7 +9,7 @@ Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las 
 4. Manuel Bello - m.bello@uniandes.edu.co
 
 ### Funcionalidades y escenarios de pruebas
-En [este documento](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/Funcionalidades) se describen las funcionalidades a probar y los escenarios que se generaron se pueden ver en este otro [enlace](https://github.com/jmonterovalverdeMISO/MISO40103-Entrega7maSemana/wiki/Lista-de-Escenarios). A continuación de tiene una tabla resumen de las mismas:
+En [este documento](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/Funcionalidades) se describen las funcionalidades a probar y los escenarios que se generaron se pueden ver en este otro [enlace](https://github.com/jmonterovalverdeMISO/MISO4103EntregaFinal/wiki/Escenario-de-Pruebas). A continuación de tiene una tabla resumen de las mismas:
 
 | Id | Nombre | 
 | - | - | 
