@@ -1,6 +1,6 @@
 # Entrega Semana 8
 ## Ghost 
-Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las versiones 3.3.0 y 3.42.5) utilizando como API de automatización [Cypress](https://www.cypress.io/). La cual se basa en esta [estrategia de pruebas](https://uniandes-my.sharepoint.com/:b:/g/personal/j_monterov_uniandes_edu_co/EdLlwdR6u2xNr8VjiHyZ2esB1-31H3fp8FXt09LyNY-jLg?e=BNPtP4). 
+Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las versiones 3.3.0 y 3.42.5) utilizando como API de automatización [Cypress](https://www.cypress.io/). La cual se basa en esta [estrategia de pruebas](https://uniandes-my.sharepoint.com/:b:/g/personal/j_monterov_uniandes_edu_co/EdLlwdR6u2xNr8VjiHyZ2esB1-31H3fp8FXt09LyNY-jLg?e=BNPtP4). (Además pueden ver [este video]() resumen de la estratégia y los resultados)
 
 Adicionalmente esta semana se ejecutaron pruebas de exploración de forma manual que se pueden encontrar en [este enlace](https://uniandes-my.sharepoint.com/:x:/g/personal/j_monterov_uniandes_edu_co/ES1fl5mzP0FPkk1xGvkg2CwBaP9jorG8GsVtSCY4dJtezA?e=Roqb7D).
 
