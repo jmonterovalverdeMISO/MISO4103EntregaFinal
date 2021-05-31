@@ -85,9 +85,7 @@ class PagesPage {
   }
 
   static getBookmarkOption() {
-    return cy.get(
-      'div:contains("Bookmark").f-supersmall.tracked-1.fw3.ma0.mt1'
-    ).first();
+    return cy.get('div[title="Bookmark"').first();
   }
 
   static getPostSettingsButton() {

@@ -6,21 +6,23 @@ Cypress.Commands.add('login', () => {
 
   Cypress.config('baseUrl', Cypress.env('GHOST_HOST'))
 
-  cy.visit('/ghost/#/signin');
-  cy.wait(5000);
+  cy.visit('/ghost/#/signin')
+    .wait(500)
+    .then((window) => {
+      if (window.location.href.includes('/ghost/#/signin')) {
+        LoginPage.getUserNameField().type(user);
+        LoginPage.getPasswordField().type(password);
+        LoginPage.getSignInButon().click();
+      
+        cy.wait(500)
+      }
+    });
+})
 
-  cy.url().then((url) => {
-    if (url.includes('/ghost/#/signin')) {
-      LoginPage.getUserNameField().type(user);
-      LoginPage.getPasswordField().type(password);
-      LoginPage.getSignInButon().click();
-    
-      cy.wait(500)
-    }
-  });
+Cypress.Commands.add('home', () => {
+  cy.visit('/ghost')
 })
 
 Cypress.Commands.add('logout', () => {
   cy.visit('/ghost/#/signout')
-  cy.wait(5000)
 })

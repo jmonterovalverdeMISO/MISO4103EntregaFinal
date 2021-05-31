@@ -101,9 +101,7 @@ class PostsPage {
   }
 
   static getBookmarkOption() {
-    return cy.get(
-      'div:contains("Bookmark").f-supersmall.tracked-1.fw3.ma0.mt1'
-    );
+    return cy.get('div[title="Bookmark"').first();
   }
 
   static getBookmarkInput() {

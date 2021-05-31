@@ -1,53 +1,47 @@
-import pageLongContentText from './pageLongContentText.json';
-import pageNaughtyContent from './pageNaughtyContent.json';
-import pageNaughtyTitle from './pageNaughtyTitle.json';
-import postTimesDiffFormat from './postTimesDiffFormat.json';
-import postDatesDiffFormat from './postDatesDiffFormat.json';
-import postDifferentLanguages from './postDifferentLanguages.json';
-import postLongContentText from './postLongContentText.json';
-import postNaughtyContent from './postNaughtyContent.json';
-import postNaughtyTitle from './postNaughtyTitle.json';
-import postRandomNumbers from './postRandomNumbers.json';
-  
+import pageValidData from './pageValidData.json';
+import pageLongData from './pageLongData.json';
+import pageNaughtyData from './pageNaughtyData.json';
+import postValidData from './postValidData.json';
+import postLongData from './postLongData.json';
+import postNaughtyData from './postNaughtyData.json';
+
+import faker from 'faker';
+
 class AprioriPool {
-  getPageLongContentTextData() {
-    return pageLongContentText;
+  getPageLongData() {
+    const index = faker.datatype.number(pageLongData.length - 1);
+
+    return pageLongData[index];
   }
     
-  getPageNaughtyContentData() {
-    return pageNaughtyContent;
+  getPageNaughtyData() {
+    const index = faker.datatype.number(pageNaughtyData.length - 1);
+
+    return pageNaughtyData[index];
+  }
+
+  getPageValidData() {
+    const index = faker.datatype.number(pageValidData.length - 1);
+
+    return pageValidData[index];
+  }
+
+  getPostLongData() {
+    const index = faker.datatype.number(postLongData.length - 1);
+
+    return postLongData[index];
   }
     
-  getPageNaughtyTitleData() {
-    return pageNaughtyTitle;
+  getPostNaughtyData() {
+    const index = faker.datatype.number(postNaughtyData.length - 1);
+
+    return postNaughtyData[index];
   }
 
-  getPostTimesDiffFormat() {
-    return postTimesDiffFormat;
-  }
+  getPostValidData() {
+    const index = faker.datatype.number(postValidData.length - 1);
 
-  getPostDatesDiffFormat() {
-    return postDatesDiffFormat;
-  }
-
-  getPostDifferentLanguages() {
-    return postDifferentLanguages;
-  }
-
-  getPostLongContentText() {
-    return postLongContentText;
-  }
-
-  getPostNaughtyContent() {
-    return postNaughtyContent;
-  }
-
-  getPostNaughtyTitle() {
-    return postNaughtyTitle;
-  }
-
-  getPostRandomNumbers() {
-    return postRandomNumbers;
+    return postValidData[index];
   }
 }
 

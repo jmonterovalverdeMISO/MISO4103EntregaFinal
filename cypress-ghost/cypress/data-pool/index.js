@@ -1,5 +1,4 @@
 import AprioriPool from "./apriori";
-import DynamicPool from "./dynamic";
 import RandomPool from "./random";
 
 class DataPool {
