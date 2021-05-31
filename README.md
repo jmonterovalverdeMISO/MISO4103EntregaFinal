@@ -1,6 +1,8 @@
 # Entrega Semana 8
 ## Ghost 
-Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las versiones 3.3.0 y 3.42.5) utilizando como API de automatización [Cypress](https://www.cypress.io/).
+Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las versiones 3.3.0 y 3.42.5) utilizando como API de automatización [Cypress](https://www.cypress.io/). La cual se basa en esta [estrategia de pruebas](https://uniandes-my.sharepoint.com/:b:/g/personal/j_monterov_uniandes_edu_co/EdLlwdR6u2xNr8VjiHyZ2esB1-31H3fp8FXt09LyNY-jLg?e=BNPtP4). 
+
+Adicionalmente esta semana se ejecutaron pruebas de exploración de forma manual que se pueden encontrar en [este enlace](https://uniandes-my.sharepoint.com/:x:/g/personal/j_monterov_uniandes_edu_co/ES1fl5mzP0FPkk1xGvkg2CwBaP9jorG8GsVtSCY4dJtezA?e=Roqb7D).
 
 ## Integrantes
 1. Carlos Garcia - cj.garcias1@uniandes.edu.co
@@ -54,3 +56,6 @@ Una vez la ejecución de las pruebas hayan finalizado los resultados se guardan 
 Este es generado a través de Cypress por esta razón se debe ejecutar primero este suite de pruebas. Una vez finalizado a través de `vrt-results/report/index.html` se puede visualizar los resultados de las pruebas de regresión visual
 
 ![Screenshot from 2021-05-16 22-11-44](https://user-images.githubusercontent.com/78863809/118427858-ccf52e00-b693-11eb-85c2-b1c56c9a727a.png)
+
+Retrospectiva
+En [este enlace](https://github.com/jmonterovalverdeMISO/MISO4103EntregaFinal/wiki/Retrospectiva) encontrará la restrospectiva del proyecto de todo el curso.
