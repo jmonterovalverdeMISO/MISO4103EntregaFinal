@@ -1,12 +1,6 @@
-# Entrega Semana 7 - Pool de datos
+# Entrega Semana 8
 ## Ghost 
 Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las versiones 3.3.0 y 3.42.5) utilizando como API de automatización [Cypress](https://www.cypress.io/).
-<br/>
-### Estrategia de generación de datos
-Las pruebas realizadas se encuentran desarrolladas en cypress. Para la ejecución de estas pruebas se usaron 3 tipos de pool de datos:
-1. **Pool de datos a-priori**: usando Mockaroo se generaron archivos `.json` que cubren diferentes escenarios (link a los mismos en secciones posteriores)
-2. **Pool de datos (pseudo) aleatorio dinámico**: usando el api de Mockaroo realizamos una solicitud para generar nuevas tuplas de datos cada vez que se corren la suite de pruebas, estas nuevas tuplas se concatenan en su archivo `.json` correspondiente, simultaneamente el suite de prueba escoge tuplas del data pool aleatoriamente de esta forma, durante cada ejecución el suite va generando y utilizando datos nuevos. 
-3. **Pool de datos aleatorio**: se realizo una interface que implementa Faker.js para generar datos en aleatoriamente de forma que los metodos siempre retornaran un valor diferente siempre que sea llamado en cada corrida.
 
 ## Integrantes
 1. Carlos Garcia - cj.garcias1@uniandes.edu.co
@@ -19,11 +13,8 @@ En [este documento](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSema
 
 | Id | Nombre | 
 | - | - | 
-| [F01](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/F01) | Crear Tag |
 | [F02](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/F02) | Crear Post | 
-| [F03](F03) | Editar Post | 
 | [F04](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/F04) | Crear Page | 
-| [F05](https://github.com/jmonterovalverdeMISO/MISO4103-EntregaSemana/wiki/F05) | Editar Page | 
 
 Todas las funcionalidades tinen escenarios para ser probadas en ambas versiones de Ghost.
 
@@ -31,16 +22,19 @@ Todas las funcionalidades tinen escenarios para ser probadas en ambas versiones 
 ## Pasos para despliegue
 1. Instalar [docker](https://www.docker.com/get-started) segun tu sistema operativo
 2. Clonar este repositorio en su máquina local. Si necesita ayuda puede consultar este [link](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-3. Abrir una consola que esté ubicada sobre el folder del repositorio que clonó en el paso 2.
-4. Verificar que el servicio de docker está corriendo.
-5. Ejecutar `docker-compose build` en una consola para construir las imagenes de VRT, ghost, cypress y kraken. 
-6. Ejecutar `docker-compose up -d` en una consola para iniciar infraestructura de pruebas.
 
-Una vez ejecutados los pasos se desplegarán automaticamente la infraestructura con Ghost y se ejecutaran los suite de pruebas headless.
+### Correr pruebas Ghost 3.3.0
+1. En el directorio raiz ejecutar `docker-compose -f docker-compose.ghost-3.3.0.yml build` para construir las imagenes del proyecto
+2. Ejecutar `docker-compose -f docker-compose.ghost-3.3.0.yml up -d` para iniciar la infraestructura de pruebas
 
-AGREGAR IMAGEN DOCKER
+### Correr pruebas Ghost 3.42.5
+1. En el directorio raiz ejecutar `docker-compose -f docker-compose.ghost-3.42.5.yml build` para construir las imagenes del proyecto
+2. Ejecutar `docker-compose -f docker-compose.ghost-3.42.5.yml up -d` para iniciar la infraestructura de pruebas
 
-
+### Correr pruebas regresion visual
+Antes de correr las pruebas de regresión visual, debes haber corrido los suite para Ghost 3.3.0 y 3.42.5 previamente.
+1. En el directorio raiz ejecutar `docker-compose -f docker-compose.vrt.yml build` para construir las imagenes del proyecto
+2. Ejecutar `docker-compose -f docker-compose.vrt.yml up -d` para iniciar la infraestructura de pruebas
 
 ## Ver ejecución de pruebas
 Para visualizar el progreso de un contenedor puedes ejecutar los siguientes comandos en una consola:
@@ -54,9 +48,9 @@ Notas:
 Una vez la ejecución de las pruebas hayan finalizado los resultados se guardan en las siguientes direcciones segun el suite de pruebas
 
 1. Cypress `cypress-ghost/cypress`
+3. VRT `vrt-results/report`
 
-## Reiniciar ejecución de pruebas
-Para realizar una nueva ejecución limpia de la suite de pruebas se recomienda remover los contenedores, ejecutando en la consola:
+## Ver reporte de Pruebas de Regresión Visual :paintbrush:
+Este es generado a través de Cypress por esta razón se debe ejecutar primero este suite de pruebas. Una vez finalizado a través de `vrt-results/report/index.html` se puede visualizar los resultados de las pruebas de regresión visual
 
-1. `docker-compose down`
-2. `docker-compose up -d`
+![Screenshot from 2021-05-16 22-11-44](https://user-images.githubusercontent.com/78863809/118427858-ccf52e00-b693-11eb-85c2-b1c56c9a727a.png)
