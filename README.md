@@ -30,15 +30,18 @@ Todas las funcionalidades tinen escenarios para ser probadas en ambas versiones 
 ### Correr pruebas Ghost 3.3.0
 1. En el directorio raiz ejecutar `docker-compose -f docker-compose.ghost-3.3.0.yml build` para construir las imagenes del proyecto
 2. Ejecutar `docker-compose -f docker-compose.ghost-3.3.0.yml up -d` para iniciar la infraestructura de pruebas
+3. Al finalizar las pruebas correr `docker-compose down` para limpiar el entorno de pruebas
 
 ### Correr pruebas Ghost 3.42.5
 1. En el directorio raiz ejecutar `docker-compose -f docker-compose.ghost-3.42.5.yml build` para construir las imagenes del proyecto
 2. Ejecutar `docker-compose -f docker-compose.ghost-3.42.5.yml up -d` para iniciar la infraestructura de pruebas
+3. Al finalizar las pruebas correr `docker-compose down` para limpiar el entorno de pruebas
 
 ### Correr pruebas regresion visual
 Antes de correr las pruebas de regresión visual, debes haber corrido los suite para Ghost 3.3.0 y 3.42.5 previamente.
 1. En el directorio raiz ejecutar `docker-compose -f docker-compose.vrt.yml build` para construir las imagenes del proyecto
 2. Ejecutar `docker-compose -f docker-compose.vrt.yml up -d` para iniciar la infraestructura de pruebas
+3. Al finalizar las pruebas correr `docker-compose down` para limpiar el entorno de pruebas
 
 ## Ver ejecución de pruebas
 Para visualizar el progreso de un contenedor puedes ejecutar los siguientes comandos en una consola:
